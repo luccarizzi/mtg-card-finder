@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>MTG Card Finder</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Card Finder</h1>
+        <form action="/" method="POST">
+            <label for="text_input">Enter your card name:</label>
+            <input type="text" name="text_input" id="text_input" required>
+            <input type="submit" value="Find Card">
+        </form>
+    </div>
+</body>
+
+</html>
