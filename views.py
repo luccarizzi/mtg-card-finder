@@ -15,16 +15,9 @@ def home():
         try:
             response = json.loads(requests.request('GET', f'{url}{card_name}').text)
             data['name'] = response['name']
-            return redirect(url_for('views.output'))
+            data['image'] = response['image_uris']['normal']
+            return render_template('image.html', image_uri=data['image'])
         except Exception as e:
-            return redirect(url_for('views.not_found'))
+            return render_template('not_found.html', card_name=request.form['card_name'])
     else:
         return render_template('index.html')
-
-@views.route('/output')
-def output():
-    return data
-
-@views.route('/not_found')
-def not_found():
-    return 'PAGE NOT FOUND'

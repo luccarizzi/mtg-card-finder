@@ -22,7 +22,7 @@ h1 {
 }
 
 form {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 label {
@@ -54,4 +54,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.image {
+    max-width: -webkit-fill-available;
+    border-radius: 20px;
+}
+
+.not_found {
+    font-size: 14px;
+    text-align: center;
+}
+
+.card-name {
+    font-style: italic;
+    color: #bb3535;
 }
